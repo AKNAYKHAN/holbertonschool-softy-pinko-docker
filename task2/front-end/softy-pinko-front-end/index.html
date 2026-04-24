@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Softy Pinko</title>
+</head>
+<body>
+<h1>Front-End is Working!</h1>
+<p id="data">Loading...</p>
+<script>
+fetch("http://localhost:5252/api/hello")
+.then(res => res.text())
+.then(data => {
+document.getElementById("data").innerText = data;
+})
+.catch(err => {
+document.getElementById("data").innerText = "Error connecting API";
+});
+</script>
+</body>
+</html>
